@@ -1,0 +1,10 @@
+<h2>Người nhận: Kiểm tra chữ ký</h2>
+<form method="post" enctype="multipart/form-data" action="/verify">
+    File: <input type="file" name="file"><br>
+    Chữ ký: <input type="file" name="signature"><br>
+    Public key: <input type="file" name="publickey"><br>
+    <button type="submit">Xác minh</button>
+</form>
+{% if result %}
+<p><strong>Kết quả:</strong> {{ result }}</p>
+{% endif %}

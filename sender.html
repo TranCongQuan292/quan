@@ -1,0 +1,11 @@
+<h2>Người gửi: Ký và gửi file</h2>
+<form method="post" enctype="multipart/form-data" action="/sign">
+    <input type="file" name="file"><br>
+    <button type="submit">Ký và tạo file chữ ký</button>
+</form>
+{% if signature %}
+<p>✅ Đã ký file thành công.</p>
+<p><a href="/static/uploads/file.bin" download>Tải file</a></p>
+<p><a href="/static/uploads/signature.sig" download>Tải chữ ký</a></p>
+<p><a href="/static/uploads/public.pem" download>Tải public key</a></p>
+{% endif %}
