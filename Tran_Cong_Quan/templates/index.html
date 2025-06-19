@@ -1,0 +1,26 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Truyền File Ký Số</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Ứng dụng truyền file có ký số</h1>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <label>Chọn file:</label><br>
+            <input type="file" name="file" required><br><br>
+
+            <label>Chọn hành động:</label><br>
+            <select name="action">
+                <option value="download">Tải file đã ký về</option>
+                <option value="socket">Gửi file qua Socket</option>
+            </select><br><br>
+
+            <button type="submit">Thực hiện</button>
+        </form>
+    </div>
+</body>
+</html>
